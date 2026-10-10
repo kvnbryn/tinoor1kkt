@@ -2,8 +2,13 @@
    FLOATING WIDGETS & MODAL CONTROLLERS (Visitor Stats, Accessibility, Pengaduan)
    ========================================================================== */
 
+import { initVisitorCounter } from './visitorCounter.js';
+
 export function initWidgets() {
-  // 1. Visitor Counter Widget Toggle
+  // 1. Initialize Real-Time Visitor Counter Sync
+  initVisitorCounter();
+
+  // Visitor Counter Widget Toggle
   const visitorWidget = document.querySelector('.floating-visitor-widget');
   const visitorBtn = document.querySelector('.visitor-pill-button');
 
