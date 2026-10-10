@@ -1,135 +1,173 @@
 /* ==========================================================================
-   REAL-TIME VISITOR COUNTER ENGINE (Cloudflare / Public API Synchronized)
-   Tracks real visitors, deduplicates per browser session, and syncs live numbers.
+   REAL-TIME VISITOR COUNTER ENGINE (ZERO-BASED LOGICAL TRACKING)
+   - Starts truly from ZERO (0) with zero artificial padding.
+   - Tracks real visits partitioned by WITA timezone (UTC+8, Tomohon):
+     * Hari Ini (Today)
+     * Kemarin (Yesterday)
+     * Minggu Ini (Current ISO Week)
+     * Bulan Ini (Current Month)
+     * Total Kunjungan (All-Time Total)
+   - Session deduplication: One increment per user session.
+   - Cross-client server synchronization via Abacus integer service.
    ========================================================================== */
 
-const BASE_TOTAL = 24310;
-const BASE_TODAY = 148;
-const BASE_YESTERDAY = 182;
-const BASE_WEEK = 1045;
-const BASE_MONTH = 4890;
-
-const SESSION_KEY = 'tinoor_visit_logged_v1';
-const CACHE_KEY = 'tinoor_visitor_cache_v1';
+const NAMESPACE = 'tinoorsatu-site-v2';
+const SESSION_KEY = 'tinoor_visit_session_v2';
+const CACHE_KEY = 'tinoor_visitor_stats_v2';
 
 function formatNumber(num) {
-  return new Intl.NumberFormat('id-ID').format(num);
+  return new Intl.NumberFormat('id-ID').format(Math.max(0, Number(num) || 0));
+}
+
+/**
+ * Returns date components in WITA timezone (UTC+8)
+ */
+function getWitaDate(daysAgo = 0) {
+  const now = new Date();
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  const wita = new Date(utc + (8 * 3600000) - (daysAgo * 86400000));
+  const y = wita.getFullYear();
+  const m = String(wita.getMonth() + 1).padStart(2, '0');
+  const d = String(wita.getDate()).padStart(2, '0');
+  return {
+    dateStr: `${y}-${m}-${d}`,
+    monthStr: `${y}-${m}`,
+    year: y
+  };
+}
+
+/**
+ * Returns current ISO week string in WITA (e.g., "2026-W41")
+ */
+function getWitaWeekStr() {
+  const now = new Date();
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  const date = new Date(utc + (8 * 3600000));
+  const dayNum = date.getUTCDay() || 7;
+  date.setUTCDate(date.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
+  const weekNo = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+  return `${date.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`;
+}
+
+/**
+ * Fetches counter value from public server
+ */
+async function fetchCounter(action, key) {
+  try {
+    const res = await fetch(`https://abacus.jasoncameron.dev/${action}/${NAMESPACE}/${key}`, {
+      cache: 'no-store'
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (typeof data.value === 'number') return data.value;
+    }
+  } catch (err) {
+    // Network or key not found
+  }
+  return null;
 }
 
 export async function initVisitorCounter() {
-  // Read local cache first for instant display
-  let cachedHits = 1;
+  const today = getWitaDate(0);
+  const yesterday = getWitaDate(1);
+  const weekStr = getWitaWeekStr();
+
+  // 1. Read cached state for instant display (starts at 0)
+  let stats = {
+    today: 0,
+    yesterday: 0,
+    week: 0,
+    month: 0,
+    total: 0,
+    lastDate: today.dateStr
+  };
+
   try {
     const raw = localStorage.getItem(CACHE_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
-      if (typeof parsed.hits === 'number') {
-        cachedHits = parsed.hits;
+      if (parsed && typeof parsed.total === 'number') {
+        if (parsed.lastDate === today.dateStr) {
+          stats.today = parsed.today || 0;
+          stats.yesterday = parsed.yesterday || 0;
+          stats.week = parsed.week || 0;
+          stats.month = parsed.month || 0;
+          stats.total = parsed.total || 0;
+        } else if (parsed.lastDate === yesterday.dateStr) {
+          // Midnight turnover: yesterday's count is yesterday's today
+          stats.yesterday = parsed.today || 0;
+          stats.week = parsed.week || 0;
+          stats.month = parsed.month || 0;
+          stats.total = parsed.total || 0;
+          stats.today = 0;
+        }
       }
     }
   } catch {
-    // ignore
+    // Ignore cache parse error
   }
 
-  // Render initial cached/baseline stats immediately so user never sees empty/broken UI
-  updateDOMStats(cachedHits);
+  // Display initial numbers immediately
+  updateDOMStats(stats);
+  injectLiveBadge();
 
-  // Determine whether to increment (new session) or simply fetch current count (same session)
+  // 2. Session check: only increment once per browser tab session
   const isNewSession = !sessionStorage.getItem(SESSION_KEY);
-  let liveHits = cachedHits;
+  const action = isNewSession ? 'hit' : 'get';
 
   try {
+    const [todayVal, yesterdayVal, weekVal, monthVal, totalVal] = await Promise.all([
+      fetchCounter(action, `day_${today.dateStr}`),
+      fetchCounter('get', `day_${yesterday.dateStr}`),
+      fetchCounter(action, `week_${weekStr}`),
+      fetchCounter(action, `month_${today.monthStr}`),
+      fetchCounter(action, 'total')
+    ]);
+
     if (isNewSession) {
-      liveHits = await hitCounter();
       sessionStorage.setItem(SESSION_KEY, 'true');
-    } else {
-      liveHits = await getCounter(cachedHits);
+    }
+
+    stats = {
+      today: typeof todayVal === 'number' ? todayVal : (stats.today + (isNewSession ? 1 : 0)),
+      yesterday: typeof yesterdayVal === 'number' ? yesterdayVal : (stats.yesterday || 0),
+      week: typeof weekVal === 'number' ? weekVal : (stats.week + (isNewSession ? 1 : 0)),
+      month: typeof monthVal === 'number' ? monthVal : (stats.month + (isNewSession ? 1 : 0)),
+      total: typeof totalVal === 'number' ? totalVal : (stats.total + (isNewSession ? 1 : 0)),
+      lastDate: today.dateStr
+    };
+
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify(stats));
+    } catch {
+      // Ignore quota error
     }
   } catch (err) {
-    console.warn('[VisitorCounter] Network offline or fallback to cache:', err);
+    console.warn('[VisitorCounter] Network offline, using local state:', err);
     if (isNewSession) {
-      liveHits = cachedHits + 1;
+      stats.today += 1;
+      stats.week += 1;
+      stats.month += 1;
+      stats.total += 1;
       sessionStorage.setItem(SESSION_KEY, 'true');
+      try {
+        localStorage.setItem(CACHE_KEY, JSON.stringify(stats));
+      } catch {}
     }
   }
 
-  // Save new cache and update DOM with synced values
-  try {
-    localStorage.setItem(
-      CACHE_KEY,
-      JSON.stringify({ hits: liveHits, timestamp: Date.now() })
-    );
-  } catch {
-    // ignore
-  }
-
-  updateDOMStats(liveHits);
-  injectLiveBadge();
+  // Update DOM with synchronized true counts
+  updateDOMStats(stats);
 }
 
 /**
- * Increment visit on the real public counter backend
+ * Update all DOM elements showing visitor stats
  */
-async function hitCounter() {
-  try {
-    // Primary endpoint: Abacus
-    const res = await fetch('https://abacus.jasoncameron.dev/hit/tinoorsatu-site/visits', {
-      cache: 'no-store',
-    });
-    if (res.ok) {
-      const data = await res.json();
-      if (typeof data.value === 'number') return data.value;
-    }
-  } catch (e) {
-    // Try backup endpoint
-  }
+function updateDOMStats(stats) {
+  const { today, yesterday, week, month, total } = stats;
 
-  try {
-    // Backup endpoint: CountAPI
-    const res = await fetch('https://countapi.mileshilliard.com/api/v1/hit/tinoorsatu-site-visits', {
-      cache: 'no-store',
-    });
-    if (res.ok) {
-      const data = await res.json();
-      if (typeof data.value === 'number') return data.value;
-    }
-  } catch (e) {
-    // Fallback to local
-  }
-
-  throw new Error('All counter APIs unavailable');
-}
-
-/**
- * Get current visit count without incrementing
- */
-async function getCounter(fallback) {
-  try {
-    const res = await fetch('https://abacus.jasoncameron.dev/get/tinoorsatu-site/visits', {
-      cache: 'no-store',
-    });
-    if (res.ok) {
-      const data = await res.json();
-      if (typeof data.value === 'number') return data.value;
-    }
-  } catch (e) {
-    // Return cached
-  }
-  return fallback;
-}
-
-/**
- * Update all DOM representations of visitor stats across any page
- */
-function updateDOMStats(serverHits) {
-  const hits = Math.max(1, Number(serverHits) || 1);
-  const today = BASE_TODAY + hits;
-  const yesterday = BASE_YESTERDAY;
-  const week = BASE_WEEK + hits;
-  const month = BASE_MONTH + hits;
-  const total = BASE_TOTAL + hits;
-
-  // 1. Floating Pill Button
+  // 1. Floating Pill Button (e.g., "1 Hari Ini" or "0 Hari Ini")
   const pillCount = document.querySelector('.visitor-pill-button .visitor-count');
   if (pillCount) {
     pillCount.textContent = `${formatNumber(today)} Hari Ini`;
