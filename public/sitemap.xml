@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Halaman Utama (Beranda) -->
+  <url>
+    <loc>https://tinoorsatu.site/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tinoorsatu.site/assets/potensi/puncaktinoor.webp</image:loc>
+      <image:title>Website Resmi Kelurahan Tinoor Satu Kota Tomohon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Profil Kelurahan -->
+  <url>
+    <loc>https://tinoorsatu.site/profil.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Infografis & Demografi -->
+  <url>
+    <loc>https://tinoorsatu.site/infografis.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Posko KKT 149 UNSRAT -->
+  <url>
+    <loc>https://tinoorsatu.site/kkt.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://tinoorsatu.site/assets/kkt/banners/banner-kkt-149.webp</image:loc>
+      <image:title>Posko KKT 149 Universitas Sam Ratulangi Tinoor Satu</image:title>
+    </image:image>
+  </url>
+
+</urlset>
