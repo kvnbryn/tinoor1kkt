@@ -1,0 +1,24 @@
+<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Figure -->
+  <circle cx="20" cy="25" r="7" fill="#FDBA74"/>
+  <path d="M13 23 C13 17 27 17 27 23 C27 25 25 25 24 24 C22 22 17 22 16 24 Z" fill="#334155"/>
+  <path d="M11 54 C11 40 29 40 29 54 Z" fill="#6366F1"/>
+  <polygon points="20,40 18,46 22,46" fill="#FFFFFF"/>
+  <polygon points="20,43 19,50 21,50" fill="#F59E0B"/>
+  
+  <!-- Right Figure -->
+  <circle cx="48" cy="25" r="7" fill="#FDBA74"/>
+  <path d="M41 23 C41 17 55 17 55 23 C55 25 53 25 52 24 C50 22 45 22 44 24 Z" fill="#1E293B"/>
+  <path d="M39 54 C39 40 57 40 57 54 Z" fill="#0D9488"/>
+  <polygon points="48,40 46,46 50,46" fill="#FFFFFF"/>
+  <polygon points="48,43 47,50 49,50" fill="#3B82F6"/>
+
+  <!-- Center Figure (Chief Executive) -->
+  <circle cx="34" cy="21" r="8" fill="#FED7AA"/>
+  <path d="M26 19 C26 12 42 12 42 19 C42 21 40 21 38 20 C35 18 31 18 30 20 Z" fill="#0F172A"/>
+  <path d="M22 56 C22 37 46 37 46 56 Z" fill="#1E3A8A"/>
+  <polygon points="34,37 29,44 39,44" fill="#FFFFFF"/>
+  <polygon points="34,40 32.5,44.5 35.5,44.5" fill="#DC2626"/>
+  <polygon points="32.5,44.5 35.5,44.5 35,53 34,55 33,53" fill="#DC2626"/>
+  <circle cx="27" cy="46" r="1.5" fill="#F59E0B"/>
+</svg>

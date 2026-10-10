@@ -1,0 +1,19 @@
+<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sun -->
+  <circle cx="48" cy="18" r="9" fill="#F59E0B"/>
+  <!-- Distant Mountain (Mahawu) -->
+  <polygon points="12,56 32,24 50,56" fill="#047857"/>
+  <polygon points="32,24 28,30 36,31 32,24" fill="#6EE7B7"/>
+  <!-- Main Mountain (Gunung Lokon) -->
+  <polygon points="26,56 46,18 64,56" fill="#10B981"/>
+  <polygon points="46,18 42,26 50,27 46,18" fill="#A7F3D0"/>
+  <!-- Pine Tree -->
+  <polygon points="16,56 11,48 21,48" fill="#064E3B"/>
+  <polygon points="16,49 12,42 20,42" fill="#047857"/>
+  <polygon points="16,43 14,37 18,37" fill="#10B981"/>
+  <rect x="15" y="56" width="2" height="4" fill="#78350F"/>
+  <!-- Green Rolling Hill -->
+  <path d="M4 58 C18 54, 48 54, 64 58 Z" fill="#84CC16"/>
+  <!-- Waterfall Stream -->
+  <path d="M38 46 Q40 52 39 58" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+</svg>

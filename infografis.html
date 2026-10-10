@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Infografis Demografi Penduduk | Website Resmi Kelurahan Tinoor Satu</title>
+  <meta name="description"
+    content="Infografis statistik demografi kependudukan Kelurahan Tinoor Satu, Kecamatan Tomohon Utara, Kota Tomohon. Data jumlah penduduk, kepala keluarga, piramida usia, pendidikan, dan pekerjaan." />
+  <meta name="keywords"
+    content="Infografis Tinoor Satu, Demografi Penduduk Tomohon, Statistik Kelurahan Tinoor Satu, Data Kependudukan Tomohon Utara" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Infografis Demografi Penduduk | Kelurahan Tinoor Satu" />
+  <meta property="og:description"
+    content="Informasi karakteristik demografi kependudukan Kelurahan Tinoor Satu, Kecamatan Tomohon Utara, Kota Tomohon." />
+  <meta property="og:image" content="/assets/images/demografi-3d.webp" />
+
+  <!-- Google Fonts: Outfit (Matching Kersik Style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" type="image/webp" href="/assets/images/lambang-kota-tomohon.webp" />
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+
+<body>
+
+  <!-- TOP ROUTE PROGRESS BAR (Glowing Green Page Transition Indicator) -->
+  <div id="top-page-progressbar"></div>
+
+  <!-- FULLSCREEN MOUNTAIN PRELOADER (Lottie Vector Style) -->
+  <div id="app-preloader" aria-hidden="true">
+    <div class="preloader-card">
+      <div class="mountain-lottie-stage">
+        <div class="mountain-glow-aura"></div>
+        <svg class="mountain-svg" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sunGradI" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FDE047" />
+              <stop offset="60%" stop-color="#F59E0B" />
+              <stop offset="100%" stop-color="#EA580C" />
+            </linearGradient>
+            <linearGradient id="mtnBackGradI" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#2D5A1E" />
+              <stop offset="100%" stop-color="#0E2408" />
+            </linearGradient>
+            <linearGradient id="mtnFrontGradI" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#55B326" />
+              <stop offset="65%" stop-color="#2B6B10" />
+              <stop offset="100%" stop-color="#112E06" />
+            </linearGradient>
+            <linearGradient id="snowGradI" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#D1FAE5" stop-opacity="0.4" />
+            </linearGradient>
+          </defs>
+
+          <!-- Rising Golden Sun -->
+          <g class="lottie-sun">
+            <circle class="lottie-sun-glow" cx="110" cy="72" r="28" fill="#FBBF24" opacity="0.35" />
+            <circle cx="110" cy="72" r="18" fill="url(#sunGradI)" />
+          </g>
+
+          <!-- Back Mountain Ridge -->
+          <path d="M70 140 L135 60 L195 140 Z" fill="url(#mtnBackGradI)" opacity="0.9" />
+          <path d="M135 60 L146 76 L130 82 L120 74 Z" fill="url(#snowGradI)" opacity="0.6" />
+
+          <!-- Floating Clouds -->
+          <g class="lottie-cloud-left" opacity="0.85">
+            <path d="M35 85 C35 80 40 76 46 76 C48 71 54 68 60 70 C64 68 69 71 71 75 C75 75 78 78 78 82 C78 85 75 87 72 87 L38 87 C36 87 35 86 35 85 Z" fill="#E2FAD2" />
+          </g>
+
+          <g class="lottie-cloud-right" opacity="0.75">
+            <path d="M140 68 C140 64 144 61 149 61 C151 57 156 55 161 56 C164 54 168 56 170 59 C173 59 176 62 176 65 C176 68 173 70 170 70 L142 70 C141 70 140 69 140 68 Z" fill="#E2FAD2" />
+          </g>
+
+          <!-- Main Foreground Mountain (Gunung Lokon) -->
+          <g class="lottie-mountain-peak">
+            <path d="M25 145 L95 42 L165 145 Z" fill="url(#mtnFrontGradI)" />
+            <path d="M95 42 L106 62 L97 68 L88 58 Z" fill="url(#snowGradI)" />
+            <path d="M95 42 L92 145" stroke="#163C08" stroke-width="2" opacity="0.35" />
+          </g>
+
+          <!-- Pine Trees at Base -->
+          <g class="lottie-trees" fill="#133606">
+            <path d="M50 145 L54 135 L58 145 Z" />
+            <path d="M62 145 L67 132 L72 145 Z" />
+            <path d="M125 145 L130 133 L135 145 Z" />
+            <path d="M140 145 L145 136 L150 145 Z" />
+          </g>
+
+          <!-- Terrain Horizon -->
+          <path d="M10 145 C60 140 160 140 210 145 L210 152 L10 152 Z" fill="#0B2004" />
+        </svg>
+      </div>
+
+      <div class="preloader-brand-title">
+        Kelurahan <span>Tinoor Satu</span>
+      </div>
+      <p class="preloader-status-text">Memuat Infografis Kependudukan...</p>
+
+      <div class="preloader-track" role="progressbar" aria-label="Loading Portal" aria-valuemin="0" aria-valuemax="100">
+        <div class="preloader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER / NAVBAR -->
+  <header class="site-header" id="main-header">
+    <div class="container navbar-container">
+      <a href="/" class="brand-link" id="brand-logo-link">
+        <img src="/assets/images/lambang-kota-tomohon.webp" alt="Lambang Kota Tomohon" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-title">Kelurahan Tinoor Satu</span>
+          <span class="brand-subtitle">Kecamatan Tomohon Utara, Kota Tomohon</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" aria-label="Navigasi Utama">
+        <a href="/" class="nav-link" id="nav-home">Home</a>
+        <a href="/profil.html" class="nav-link" id="nav-profil">Profil Kelurahan</a>
+        <a href="/infografis.html" class="nav-link active" id="nav-infografis">Infografis</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="burger-button" aria-label="Buka Menu Navigasi" id="mobile-menu-toggle">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Menu Mobile">
+    <div class="brand-text" style="margin-bottom: 2rem;">
+      <h3 style="color: var(--mantine-color-primary-9); font-size: 1.25rem;">Kelurahan Tinoor Satu</h3>
+      <p style="font-size: 0.85rem; color: var(--color-text-muted);">Kota Tomohon, Sulawesi Utara</p>
+    </div>
+    <nav style="display: flex; flex-direction: column;">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/profil.html" class="mobile-nav-link">Profil Kelurahan</a>
+      <a href="/infografis.html" class="mobile-nav-link active">Infografis</a>
+    </nav>
+    <div class="drawer-footer">
+      <p>Pelayanan Masyarakat:<br><strong>08.00 - 15.30 WITA</strong></p>
+    </div>
+  </aside>
+
+  <!-- PAGE HERO BANNER -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <div class="page-nav-breadcrumbs">
+        <a href="/">Home</a> &rsaquo; <span>Infografis Kependudukan</span>
+      </div>
+      <h1 class="page-hero-title">Infografis Kelurahan Tinoor Satu</h1>
+      <p class="page-hero-subtitle">
+        Visualisasi data demografi, komposisi kelompok umur, sebaran per lingkungan, mata pencaharian, dan status
+        kependudukan masyarakat.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN INFOGRAFIS CONTENT -->
+  <main class="infografis-page">
+    <div class="container">
+
+      <!-- 1. DEMOGRAFI PENDUDUK HEADER (EXACT SCREENSHOT 2) -->
+      <section class="demografi-header-card" aria-label="Demografi Penduduk">
+        <div class="demografi-header-content">
+          <h2 class="demografi-main-title">DEMOGRAFI PENDUDUK</h2>
+          <p class="demografi-header-desc">
+            Memberikan informasi lengkap mengenai karakteristik demografi penduduk suatu wilayah. Mulai dari jumlah
+            penduduk, usia, jenis kelamin, tingkat pendidikan, pekerjaan, agama, dan aspek penting lainnya yang
+            menggambarkan komposisi populasi secara rinci.
+          </p>
+        </div>
+        <div class="demografi-illustration-wrap">
+          <img src="/assets/images/demografi-3d.webp" alt="Ilustrasi 3D Demografi Penduduk"
+            class="demografi-illustration" />
+        </div>
+      </section>
+
+      <!-- 2. JUMLAH PENDUDUK DAN KEPALA KELUARGA (EXACT SCREENSHOT 2) -->
+      <section aria-label="Jumlah Penduduk dan Kepala Keluarga">
+        <h3 class="demografi-subtitle">Jumlah Penduduk dan Kepala Keluarga</h3>
+
+        <!-- THE 4 STAT CARDS (EXACT SCREENSHOT 2) -->
+        <div class="demografi-stats-grid">
+
+          <!-- Card 1: Total Penduduk -->
+          <div class="demografi-stat-card">
+            <div class="stat-avatar-wrap">
+              <img src="/assets/images/total-penduduk.webp" alt="Ikon Total Penduduk" class="stat-avatar" />
+            </div>
+            <div class="stat-info">
+              <span class="stat-title">TOTAL PENDUDUK</span>
+              <div class="stat-value">
+                <span class="stat-number">1.731</span>
+                <span class="stat-unit">Jiwa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Kepala Keluarga -->
+          <div class="demografi-stat-card">
+            <div class="stat-avatar-wrap">
+              <img src="/assets/images/kepala-keluarga.webp" alt="Ikon Kepala Keluarga" class="stat-avatar" />
+            </div>
+            <div class="stat-info">
+              <span class="stat-title">KEPALA KELUARGA</span>
+              <div class="stat-value">
+                <span class="stat-number">616</span>
+                <span class="stat-unit">Jiwa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Perempuan -->
+          <div class="demografi-stat-card">
+            <div class="stat-avatar-wrap">
+              <img src="/assets/images/perempuan.webp" alt="Ikon Perempuan" class="stat-avatar" />
+            </div>
+            <div class="stat-info">
+              <span class="stat-title">PEREMPUAN</span>
+              <div class="stat-value">
+                <span class="stat-number">835</span>
+                <span class="stat-unit">Jiwa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Laki-Laki -->
+          <div class="demografi-stat-card">
+            <div class="stat-avatar-wrap">
+              <img src="/assets/images/laki.webp" alt="Ikon Laki-Laki" class="stat-avatar" />
+            </div>
+            <div class="stat-info">
+              <span class="stat-title">LAKI-LAKI</span>
+              <div class="stat-value">
+                <span class="stat-number">896</span>
+                <span class="stat-unit">Jiwa</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. GRAFIK-GRAFIK STATISTIK (DATA RESMI Kelurahan TINOOR SATU) -->
+      <section aria-label="Grafik Statistik Penduduk">
+        <div class="charts-grid">
+
+          <!-- Chart 1: Berdasarkan Agama -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h4 class="chart-title">BERDASARKAN AGAMA</h4>
+              <p class="chart-desc">Komposisi pemeluk agama masyarakat Kelurahan Tinoor Satu.</p>
+            </div>
+            <div class="chart-canvas-wrap">
+              <canvas id="chart-agama"></canvas>
+            </div>
+            <div class="chart-pills-row">
+              <div class="chart-pill"><span class="chart-pill-dot" style="background: #3d920c;"></span> Kristen
+                Protestan: 1.560 Jiwa (94,5%)</div>
+              <div class="chart-pill"><span class="chart-pill-dot" style="background: #6bd731;"></span> Katolik: 86 Jiwa
+                (5,2%)</div>
+              <div class="chart-pill"><span class="chart-pill-dot" style="background: #f59e0b;"></span> Islam: 5 Jiwa
+                (0,3%)</div>
+            </div>
+          </div>
+
+          <!-- Chart 2: Berdasarkan Jenis Kelamin -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h4 class="chart-title">BERDASARKAN JENIS KELAMIN</h4>
+              <p class="chart-desc">Perbandingan jumlah penduduk laki-laki dan perempuan Kelurahan Tinoor Satu.</p>
+            </div>
+            <div class="chart-canvas-wrap">
+              <canvas id="chart-gender"></canvas>
+            </div>
+            <div class="chart-pills-row">
+              <div class="chart-pill"><span class="chart-pill-dot" style="background: #4da91b;"></span> Laki-Laki: 896
+                Jiwa (51,8%)</div>
+              <div class="chart-pill"><span class="chart-pill-dot" style="background: #87de57;"></span> Perempuan: 835
+                Jiwa (48,2%)</div>
+              <div class="chart-pill"><span class="chart-pill-dot" style="background: #3d920c;"></span> Total: 1.731
+                Jiwa</div>
+            </div>
+          </div>
+
+          <!-- Rincian Tabel Keagamaan (Full Width) -->
+          <div class="chart-card full-width">
+            <div class="chart-header">
+              <h4 class="chart-title">TABEL RINCIAN KEAGAMAAN Kelurahan TINOOR SATU</h4>
+              <p class="chart-desc">Rekapitulasi data resmi pemeluk agama di Kelurahan Tinoor Satu, Kecamatan Tomohon
+                Utara.</p>
+            </div>
+            <div style="overflow-x: auto;">
+              <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                <thead>
+                  <tr
+                    style="background: var(--mantine-color-primary-0); border-bottom: 2px solid var(--mantine-color-primary-3);">
+                    <th style="padding: 0.85rem 1rem; color: var(--mantine-color-primary-9); font-weight: 700;">No</th>
+                    <th style="padding: 0.85rem 1rem; color: var(--mantine-color-primary-9); font-weight: 700;">Agama
+                    </th>
+                    <th
+                      style="padding: 0.85rem 1rem; color: var(--mantine-color-primary-9); font-weight: 700; text-align: right;">
+                      Jumlah Jiwa</th>
+                    <th
+                      style="padding: 0.85rem 1rem; color: var(--mantine-color-primary-9); font-weight: 700; text-align: right;">
+                      Persentase</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--color-border);">
+                    <td style="padding: 0.85rem 1rem; font-weight: 600;">1</td>
+                    <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--color-text-main);">
+                      <span
+                        style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #3d920c; margin-right: 8px;"></span>
+                      Kristen Protestan
+                    </td>
+                    <td
+                      style="padding: 0.85rem 1rem; font-weight: 700; color: var(--mantine-color-primary-8); text-align: right;">
+                      1.560 Jiwa</td>
+                    <td
+                      style="padding: 0.85rem 1rem; color: var(--color-text-muted); text-align: right; font-weight: 600;">
+                      94,5%</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--color-border); background: rgba(0,0,0,0.015);">
+                    <td style="padding: 0.85rem 1rem; font-weight: 600;">2</td>
+                    <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--color-text-main);">
+                      <span
+                        style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #6bd731; margin-right: 8px;"></span>
+                      Katolik
+                    </td>
+                    <td
+                      style="padding: 0.85rem 1rem; font-weight: 700; color: var(--mantine-color-primary-8); text-align: right;">
+                      86 Jiwa</td>
+                    <td
+                      style="padding: 0.85rem 1rem; color: var(--color-text-muted); text-align: right; font-weight: 600;">
+                      5,2%</td>
+                  </tr>
+                  <tr style="border-bottom: 2px solid var(--color-border);">
+                    <td style="padding: 0.85rem 1rem; font-weight: 600;">3</td>
+                    <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--color-text-main);">
+                      <span
+                        style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #f59e0b; margin-right: 8px;"></span>
+                      Islam
+                    </td>
+                    <td
+                      style="padding: 0.85rem 1rem; font-weight: 700; color: var(--mantine-color-primary-8); text-align: right;">
+                      5 Jiwa</td>
+                    <td
+                      style="padding: 0.85rem 1rem; color: var(--color-text-muted); text-align: right; font-weight: 600;">
+                      0,3%</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr style="background: var(--color-bg-page); font-weight: 700;">
+                    <td colspan="2" style="padding: 0.85rem 1rem; color: var(--color-text-main);">TOTAL PENDUDUK
+                      TERCATAT</td>
+                    <td
+                      style="padding: 0.85rem 1rem; color: var(--mantine-color-primary-9); text-align: right; font-size: 1.05rem;">
+                      1.651 Jiwa</td>
+                    <td style="padding: 0.85rem 1rem; color: var(--mantine-color-primary-9); text-align: right;">100%
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FLOATING WIDGETS -->
+  <aside class="floating-visitor-widget" id="visitor-widget" aria-label="Widget Statistik Kunjungan">
+    <div class="visitor-popup-card">
+      <div class="visitor-popup-title">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+        Statistik Pengunjung
+      </div>
+      <div class="visitor-stats-list">
+        <div class="visitor-stat-row">
+          <span class="visitor-stat-name">Hari Ini</span>
+          <span class="visitor-stat-val">148</span>
+        </div>
+        <div class="visitor-stat-row">
+          <span class="visitor-stat-name">Kemarin</span>
+          <span class="visitor-stat-val">182</span>
+        </div>
+        <div class="visitor-stat-row">
+          <span class="visitor-stat-name">Minggu Ini</span>
+          <span class="visitor-stat-val">1.045</span>
+        </div>
+        <div class="visitor-stat-row">
+          <span class="visitor-stat-name">Total Kunjungan</span>
+          <span class="visitor-stat-val" style="color: var(--mantine-color-primary-8);">24.310</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="visitor-pill-button" id="btn-visitor-toggle" aria-label="Lihat Statistik Pengunjung">
+      <div class="visitor-icon-box">
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      </div>
+      <div class="visitor-text-box">
+        <span class="visitor-label">Kunjungan</span>
+        <span class="visitor-count">148 Hari Ini</span>
+      </div>
+      <svg class="visitor-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+  </aside>
+
+  <aside class="floating-actions-container" aria-label="Aksi Cepat">
+    <button class="btn-accessibility-floating" id="btn-accessibility" aria-label="Aksesibilitas Website">
+      <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z" />
+      </svg>
+    </button>
+    <button class="btn-pengaduan-floating" id="btn-pengaduan-modal" aria-label="Layanan Pengaduan">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+      </svg>
+      <span>Pengaduan</span>
+    </button>
+  </aside>
+
+  <!-- Accessibility & Pengaduan Modals -->
+  <div class="modal-overlay" id="modal-accessibility" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Fitur Aksesibilitas Web</h3>
+        <button class="modal-close" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 1.25rem;">Sesuaikan tampilan teks dan warna portal agar nyaman untuk Anda membaca.</p>
+        <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--color-text-main);">Ukuran Teks</h4>
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 1.5rem;">
+          <button class="btn btn-outline" id="btn-font-small">Kecil (A-)</button>
+          <button class="btn btn-outline" id="btn-font-normal">Standar (A)</button>
+          <button class="btn btn-outline" id="btn-font-large">Besar (A+)</button>
+        </div>
+        <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--color-text-main);">Mode Kontras</h4>
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 1.5rem;">
+          <button class="btn btn-outline" id="btn-contrast-normal">Standar Hijau</button>
+          <button class="btn btn-outline" id="btn-contrast-high">Kontras Tinggi</button>
+          <button class="btn btn-outline" id="btn-contrast-dark">Mode Gelap</button>
+        </div>
+        <button class="btn btn-primary" id="btn-reset-a11y" style="width: 100%;">Reset ke Pengaturan Awal</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-pengaduan" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Layanan Pengaduan & Aspirasi Warga</h3>
+        <button class="modal-close" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 1.25rem; font-size: 0.9rem;">Sampaikan laporan atau kendala fasilitas untuk kemajuan
+          Kelurahan Tinoor Satu.</p>
+        <div
+          style="background: var(--mantine-color-primary-0); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--mantine-color-primary-2);">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <strong style="color: var(--mantine-color-primary-9); font-size: 0.95rem;">Layanan Cepat WhatsApp</strong>
+              <p style="font-size: 0.8rem; margin: 0;">Admin Pelayanan Kelurahan / Kelurahan Tinoor Satu</p>
+            </div>
+            <a href="https://wa.me/6281244567890?text=Halo%20Pemerintah%20Kelurahan%20Tinoor%20Satu" target="_blank"
+              rel="noopener" class="btn btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem;">Kirim
+              Pesan</a>
+          </div>
+        </div>
+        <form id="form-pengaduan">
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;"
+              for="pengaduan-nama">Nama Lengkap</label>
+            <input type="text" id="pengaduan-nama" required
+              style="width: 100%; padding: 0.65rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-family: inherit;"
+              placeholder="Contoh: Nama Lengkap Anda" />
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;"
+              for="pengaduan-lingkungan">Asal Lingkungan</label>
+            <select id="pengaduan-lingkungan"
+              style="width: 100%; padding: 0.65rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-family: inherit;">
+              <option value="Lingkungan 1">Lingkungan I</option>
+              <option value="Lingkungan 2">Lingkungan II</option>
+              <option value="Lingkungan 3">Lingkungan III</option>
+              <option value="Lingkungan 4">Lingkungan IV</option>
+              <option value="Lingkungan 5">Lingkungan V</option>
+              <option value="Luar Kelurahan">Masyarakat Luar Kelurahan</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 1.25rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;"
+              for="pengaduan-pesan">Isi Laporan / Pengaduan</label>
+            <textarea id="pengaduan-pesan" rows="3" required
+              style="width: 100%; padding: 0.65rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-family: inherit;"
+              placeholder="Tuliskan pesan pengaduan Anda..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pengaduan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/images/lambang-kota-tomohon.webp" alt="Logo Tomohon" class="footer-logo" />
+            <div>
+              <h3 class="footer-brand-title">Pemerintah Kelurahan Tinoor Satu</h3>
+              <span class="footer-brand-sub">Kecamatan Tomohon Utara</span>
+            </div>
+          </div>
+          <p class="footer-address">
+            <a href="https://www.google.co.id/maps/place/Tinoor+Satu,+Kec.+Tomohon+Utara,+Kota+Tomohon,+Sulawesi+Utara/@1.3789669,124.8176652,15z"
+              target="_blank" rel="noopener"
+              style="color: inherit; text-decoration: underline; text-underline-offset: 3px;"
+              title="Lihat di Google Maps">
+              Jl. Raya Manado - Tomohon, Tinoor Satu, Kecamatan Tomohon Utara, Kota Tomohon, Provinsi Sulawesi Utara,
+              Kode Pos 95431
+            </a>
+          </p>
+          <span class="footer-code-tag">Kode Wilayah: 71.73.03.1001</span>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Kontak Kelurahan</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>0812-4456-7890</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:pemdes.tinoorsatu@tomohon.go.id">pemdes.tinoorsatu@tomohon.go.id</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Senin - Jumat (08.00 - 15.30 WITA)</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Kunjungan Website</h4>
+          <div class="footer-stats-list">
+            <div class="footer-stat-row">
+              <span class="footer-stat-label">Hari Ini</span>
+              <span class="footer-stat-number">148</span>
+            </div>
+            <div class="footer-stat-row">
+              <span class="footer-stat-label">Kemarin</span>
+              <span class="footer-stat-number">182</span>
+            </div>
+            <div class="footer-stat-row">
+              <span class="footer-stat-label">Minggu Ini</span>
+              <span class="footer-stat-number">1.045</span>
+            </div>
+            <div class="footer-stat-row">
+              <span class="footer-stat-label">Total Kunjungan</span>
+              <span class="footer-stat-number">24.310</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Jelajahi</h4>
+          <div class="footer-links-list">
+            <div class="footer-link-item"><a href="/">&bull; Home</a></div>
+            <div class="footer-link-item"><a href="/profil.html">&bull; Profil Kelurahan</a></div>
+            <div class="footer-link-item"><a href="/infografis.html">&bull; Infografis Penduduk</a></div>
+            <div class="footer-link-item"><a href="https://tomohon.go.id" target="_blank" rel="noopener">&bull; Portal
+                Pemkot Tomohon</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pemerintah Kelurahan Tinoor Satu, Kota Tomohon. Hak Cipta Dilindungi.</p>
+
+        <!-- FOOTER CREDIT (Posko KKT 149 UNSRAT) -->
+        <div class="footer-credit-badge-wrap">
+          <a href="/kkt.html" class="credit-badge" title="Lihat Profil Mahasiswa Posko KKT 149 UNSRAT">
+            <div class="credit-avatar-stack">
+              <img src="/assets/kkt/mahasiswa/kevin-kalengkongan.webp" alt="Kevin Bryan Kalengkongan"
+                class="credit-stack-img" />
+              <img src="/assets/kkt/mahasiswa/samuel-abraham-kamasi.webp" alt="Samuel Abraham Kamasi"
+                class="credit-stack-img" />
+              <img src="/assets/kkt/mahasiswa/yesia-runtuwene.webp" alt="Yesia Elsadai Runtuwene"
+                class="credit-stack-img" />
+              <span class="credit-stack-more">+13</span>
+            </div>
+            <span class="credit-text">
+              <span class="credit-sparkle">✦</span>
+              <span>Karya <strong>Posko KKT 149 UNSRAT</strong></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="footer-bottom-links">
+          <a href="/profil.html">Profil Kelurahan</a>
+          <a href="/infografis.html">Infografis</a>
+          <a href="#main-header">&uarr; Kembali ke Atas</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+/* ==========================================================================
+   APP PRELOADER & TOP NAVIGATION PROGRESS BAR
+   Mountain-themed Lottie-style Vector Loader (Gunung Lokon & Mahawu Vibe)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Top Page Navigation Progress Bar (Green Glowing Line on Route Change)
+   -------------------------------------------------------------------------- */
+#top-page-progressbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  width: 0%;
+  background: linear-gradient(90deg, #2e7d32 0%, #6bd731 60%, #b9e581 100%);
+  box-shadow: 0 0 12px rgba(107, 215, 49, 0.85), 0 0 4px #3d920c;
+  z-index: 9999999;
+  pointer-events: none;
+  opacity: 0;
+  transition: width 0.3s cubic-bezier(0.1, 0.8, 0.2, 1), opacity 0.25s ease;
+}
+
+#top-page-progressbar::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: 0;
+  width: 14px;
+  height: 7.5px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #FFFFFF, 0 0 14px #6bd731;
+  opacity: 0.9;
+}
+
+#top-page-progressbar.active {
+  opacity: 1;
+}
+
+#top-page-progressbar.done {
+  width: 100% !important;
+  opacity: 0;
+  transition: width 0.15s ease-out, opacity 0.35s ease 0.15s;
+}
+
+/* --------------------------------------------------------------------------
+   2. Fullscreen Mountain Lottie-Style Preloader Overlay
+   -------------------------------------------------------------------------- */
+#app-preloader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 999999;
+  background: radial-gradient(circle at 50% 45%, #0e2905 0%, #071502 65%, #040d01 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #FFFFFF;
+  user-select: none;
+  -webkit-user-select: none;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.45s ease, transform 0.45s ease;
+}
+
+#app-preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.02);
+  pointer-events: none;
+}
+
+.preloader-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  max-width: 360px;
+  width: 100%;
+}
+
+/* Mountain Lottie SVG Stage */
+.mountain-lottie-stage {
+  position: relative;
+  width: 220px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Ambient glow orb behind mountains */
+.mountain-glow-aura {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(107, 215, 49, 0.35) 0%, rgba(245, 158, 11, 0.2) 50%, transparent 70%);
+  filter: blur(25px);
+  z-index: 1;
+  animation: auraPulse 3s infinite ease-in-out;
+}
+
+@keyframes auraPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 0.95; }
+}
+
+.mountain-svg {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Animated Sun */
+.lottie-sun {
+  transform-origin: 110px 85px;
+  animation: sunFloat 3.5s infinite ease-in-out;
+}
+
+@keyframes sunFloat {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-7px) scale(1.06); }
+}
+
+.lottie-sun-glow {
+  transform-origin: 110px 85px;
+  animation: sunGlowPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes sunGlowPulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.95); }
+  50% { opacity: 0.85; transform: scale(1.15); }
+}
+
+/* Animated Floating Clouds */
+.lottie-cloud-left {
+  animation: cloudDriftLeft 5s infinite ease-in-out;
+}
+
+@keyframes cloudDriftLeft {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(12px); }
+}
+
+.lottie-cloud-right {
+  animation: cloudDriftRight 6s infinite ease-in-out;
+}
+
+@keyframes cloudDriftRight {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-14px); }
+}
+
+/* Mountain ridge shimmer */
+.lottie-mountain-peak {
+  animation: peakBreathe 4s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+@keyframes peakBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+}
+
+/* Trees sway */
+.lottie-trees {
+  animation: treeSway 3s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+@keyframes treeSway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1.2deg); }
+}
+
+/* Preloader Typography & Bar */
+.preloader-brand-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.preloader-brand-title span {
+  color: var(--mantine-color-primary-4, #87DE57);
+}
+
+.preloader-status-text {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Progress Track & Fill */
+.preloader-track {
+  width: 210px;
+  height: 4.5px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.preloader-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3D920C 0%, #6BD731 55%, #EFFEE7 100%);
+  box-shadow: 0 0 10px rgba(107, 215, 49, 0.8);
+  transition: width 0.2s ease-out;
+}
+
+/* Indeterminate beam when width is animating */
+.preloader-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8));
+  filter: blur(2px);
+}

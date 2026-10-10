@@ -1,0 +1,88 @@
+/* ==========================================================================
+   DESIGN TOKENS & SYSTEM VARIABLES (Kersik / DIGIDES Inspired Palette)
+   ========================================================================== */
+
+:root {
+  /* Primary Green Palette */
+  --mantine-color-primary-0: #effee7;
+  --mantine-color-primary-1: #e0f8d4;
+  --mantine-color-primary-2: #c2efab;
+  --mantine-color-primary-3: #a2e67e;
+  --mantine-color-primary-4: #87de57;
+  --mantine-color-primary-5: #75d940;
+  --mantine-color-primary-6: #6bd731;
+  --mantine-color-primary-7: #59be23;
+  --mantine-color-primary-8: #4da91b;
+  --mantine-color-primary-9: #3d920c;
+  --color-primary-dark: #1b4d08;
+  --color-primary-darker: #0d2804;
+
+  /* Secondary Accents */
+  --color-secondary-accent: #2e7d32;
+  --color-accent-amber: #e67e22;
+  --color-accent-blue: #1a56db;
+  --color-accent-coral: #df7e72;
+  --color-accent-coral-hover: #c96d62;
+
+  /* Neutral & Backgrounds */
+  --color-bg-page: #F6F6F6;
+  --color-bg-card: #FFFFFF;
+  --color-bg-subtle: #F0F4EF;
+  --color-text-main: #212529;
+  --color-text-muted: #5A5E62;
+  --color-text-light: #7B8085;
+  --color-border: #E8ECEF;
+  --color-border-subtle: rgba(0, 0, 0, 0.06);
+
+  /* Typography */
+  --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0px 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --container-max-width: 1240px;
+  --header-height: 74px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* Accessibility / High Contrast / Dark Overrides */
+html.high-contrast {
+  --color-bg-page: #121212;
+  --color-bg-card: #1E1E1E;
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #D1D5DB;
+  --color-border: #4B5563;
+  --color-border-subtle: #374151;
+  --mantine-color-primary-9: #1e3a12;
+  --mantine-color-primary-6: #87de57;
+}
+
+html.font-large {
+  font-size: 118%;
+}
+
+html.font-small {
+  font-size: 88%;
+}

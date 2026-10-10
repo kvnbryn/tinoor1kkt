@@ -1,0 +1,75 @@
+/* ==========================================================================
+   MASTER STYLESHEET - Kelurahan TINOOR SATU PORTAL
+   ========================================================================== */
+
+@import './variables.css';
+@import './global.css';
+@import './navbar.css';
+@import './hero.css';
+@import './floating-widgets.css';
+@import './sections.css';
+@import './profil.css';
+@import './infografis.css';
+@import './footer.css';
+@import './kkt.css';
+@import './preloader.css';
+
+/* Extra Page-Specific Tweaks */
+.page-hero-banner {
+  background: linear-gradient(135deg, var(--color-primary-darker) 0%, var(--mantine-color-primary-9) 100%);
+  padding: 4.5rem 0 3.5rem;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .page-hero-banner {
+    padding: 3rem 0 2.25rem;
+  }
+}
+
+.page-hero-banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(135, 222, 87, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.page-hero-title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.page-hero-subtitle {
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.page-nav-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--mantine-color-primary-2);
+  margin-bottom: 1rem;
+}
+
+.page-nav-breadcrumbs a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.page-nav-breadcrumbs a:hover {
+  text-decoration: underline;
+}

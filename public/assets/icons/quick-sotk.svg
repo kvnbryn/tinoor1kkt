@@ -1,0 +1,137 @@
+<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Skin tones -->
+    <linearGradient id="sotk88-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFEDD5"/>
+      <stop offset="100%" stop-color="#FDBA74"/>
+    </linearGradient>
+
+    <!-- Hair dark -->
+    <linearGradient id="sotk88-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Suit Navy -->
+    <linearGradient id="sotk88-navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+
+    <!-- Suit Left Coral/Amber -->
+    <linearGradient id="sotk88-coral" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+
+    <!-- Suit Right Emerald/Teal -->
+    <linearGradient id="sotk88-emerald" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <!-- Golden Laurel / Emblem -->
+    <linearGradient id="sotk88-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="sotk88-shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#1E1B4B" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Disc -->
+  <circle cx="44" cy="44" r="41" fill="#EEF2FF"/>
+  <circle cx="44" cy="44" r="34" fill="#E0E7FF" opacity="0.6"/>
+
+  <g filter="url(#sotk88-shadow)">
+    <!-- Hierarchy Organizational Connection Network Lines in Background -->
+    <path d="M44 26 V14 H22 V28 M44 14 H66 V28" stroke="#818CF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+    
+    <!-- Top Hierarchy Node (Golden Star of Governance) -->
+    <circle cx="44" cy="14" r="4.5" fill="url(#sotk88-gold)"/>
+    <circle cx="44" cy="14" r="2" fill="#FFFFFF"/>
+    
+    <!-- Side Nodes -->
+    <circle cx="22" cy="22" r="3" fill="#6366F1"/>
+    <circle cx="66" cy="22" r="3" fill="#6366F1"/>
+
+    <!-- ================= FIGURE LEFT (Administrative Official) ================= -->
+    <g id="figure-left-88">
+      <!-- Body -->
+      <path d="M16 75 C16 58 32 55 32 60 L29 75 Z" fill="url(#sotk88-coral)"/>
+      <path d="M21 62 L27 65 L25 75 H19 Z" fill="#0D9488"/>
+      <!-- Head & Neck -->
+      <rect x="22" y="42" width="5" height="8" rx="2.5" fill="url(#sotk88-skin)"/>
+      <circle cx="24.5" cy="37" r="10" fill="url(#sotk88-skin)"/>
+      <!-- Hair -->
+      <path d="M14.5 36 C14.5 25 34.5 25 34.5 36 C34.5 40 33 45 32 47 C30 44 29 35 27 35 C24 35 22 41 20 47 C18 44 14.5 40 14.5 36 Z" fill="#78350F"/>
+    </g>
+
+    <!-- ================= FIGURE RIGHT (Staff / Kasi) ================= -->
+    <g id="figure-right-88">
+      <!-- Body -->
+      <path d="M72 75 C72 58 56 55 56 60 L59 75 Z" fill="url(#sotk88-emerald)"/>
+      <path d="M61 62 L67 65 L69 75 H63 Z" fill="#FFFFFF"/>
+      <path d="M64 63 L65 71 L63 71 Z" fill="#0284C7"/> <!-- Tie -->
+      <!-- Head & Neck -->
+      <rect x="61" y="42" width="5" height="8" rx="2.5" fill="url(#sotk88-skin)"/>
+      <circle cx="63.5" cy="37" r="10" fill="url(#sotk88-skin)"/>
+      <!-- Hair -->
+      <path d="M53.5 35 C53.5 25 73.5 25 73.5 35 C73.5 38 72 39 70 39 C67 34 60 33 56 36 Z" fill="url(#sotk88-hair)"/>
+    </g>
+
+    <!-- ================= FIGURE CENTER (Lurah / Chief Executive) ================= -->
+    <g id="figure-center-88">
+      <!-- Body / Navy Blazer -->
+      <path d="M26 76 C26 58 62 58 62 76 Z" fill="url(#sotk88-navy)"/>
+      
+      <!-- Crisp White Collar & Shirt -->
+      <polygon points="44,52 37,64 51,64" fill="#FFFFFF"/>
+      <polygon points="44,64 39,64 41,76 47,76 49,64" fill="#FFFFFF"/>
+      
+      <!-- Crimson Formal Tie -->
+      <polygon points="44,56 42,59 46,59" fill="#DC2626"/>
+      <polygon points="42,59 46,59 45.5,71 44,75 42.5,71" fill="#DC2626"/>
+
+      <!-- Lapel Creases -->
+      <path d="M35 59 L41 68 L37 76" stroke="#2563EB" stroke-width="1.8" fill="none"/>
+      <path d="M53 59 L47 68 L51 76" stroke="#2563EB" stroke-width="1.8" fill="none"/>
+
+      <!-- Golden Pin Badge on Lapel -->
+      <circle cx="36" cy="65" r="2.5" fill="url(#sotk88-gold)"/>
+
+      <!-- Neck -->
+      <rect x="40.5" y="41" width="7" height="9" rx="3" fill="url(#sotk88-skin)"/>
+
+      <!-- Head -->
+      <ellipse cx="44" cy="35" rx="11" ry="12.5" fill="url(#sotk88-skin)"/>
+
+      <!-- Ears -->
+      <circle cx="32.5" cy="35" r="2.8" fill="url(#sotk88-skin)"/>
+      <circle cx="55.5" cy="35" r="2.8" fill="url(#sotk88-skin)"/>
+
+      <!-- Executive Hair Grooming -->
+      <path d="M32 33 C32 20 56 20 56 33 C56 35 53 35 50 32 C46 29 38 29 35 34 Z" fill="url(#sotk88-hair)"/>
+
+      <!-- Friendly Professional Face -->
+      <circle cx="40" cy="34" r="1.3" fill="#1E293B"/>
+      <circle cx="48" cy="34" r="1.3" fill="#1E293B"/>
+      <path d="M41.5 39 Q44 42 46.5 39" stroke="#9A3412" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Golden Emblem / Seal of Governance & Service at Bottom Center -->
+    <circle cx="44" cy="74" r="9.5" fill="url(#sotk88-gold)"/>
+    <circle cx="44" cy="74" r="7.5" fill="#FFFFFF"/>
+    <!-- Five-pointed Star -->
+    <polygon points="44,69 45.6,72.3 49.2,72.8 46.6,75.3 47.2,78.9 44,77.2 40.8,78.9 41.4,75.3 38.8,72.8 42.4,72.3" fill="#F59E0B"/>
+
+    <!-- Sparkling Gold Accents -->
+    <polygon points="76,32 77.2,34 79,35 77.2,36 76,38 74.8,36 73,35 74.8,34" fill="#FBBF24"/>
+    <polygon points="12,32 13.2,34 15,35 13.2,36 12,38 10.8,36 9,35 10.8,34" fill="#FBBF24"/>
+  </g>
+</svg>

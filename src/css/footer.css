@@ -1,0 +1,373 @@
+/* ==========================================================================
+   FOOTER COMPONENT (Kersik Pattern)
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--mantine-color-primary-9);
+  color: #FFFFFF;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.footer-col-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 36px;
+  height: 2.5px;
+  background-color: var(--mantine-color-primary-3);
+  border-radius: 2px;
+}
+
+/* Brand Col */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.footer-brand-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.footer-brand-sub {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-address {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-code-tag {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--mantine-color-primary-2);
+  font-weight: 500;
+}
+
+/* Contact List */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contact-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--mantine-color-primary-3);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer-contact-item a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contact-item a:hover {
+  color: var(--mantine-color-primary-2);
+  text-decoration: underline;
+}
+
+/* Stats Col */
+.footer-stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.65rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.footer-stat-label {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-stat-number {
+  font-weight: 700;
+  color: var(--mantine-color-primary-2);
+}
+
+/* Links Col */
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-link-item a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-link-item a:hover {
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+/* Copyright Row */
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-bottom-links a:hover {
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   CREATIVE & SPECIAL FOOTER CREDIT BADGE (Posko KKT 149 UNSRAT)
+   ========================================================================== */
+.footer-credit-badge-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.credit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0.95rem 0.4rem 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.82rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.credit-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transition: left 0.75s ease;
+}
+
+.credit-badge:hover::before {
+  left: 120%;
+}
+
+.credit-badge:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(135, 222, 87, 0.55);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 15px rgba(107, 215, 49, 0.3);
+}
+
+.credit-avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.credit-stack-img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--mantine-color-primary-9);
+  margin-right: -8px;
+  transition: transform 0.25s ease;
+  background: #2D3748;
+}
+
+.credit-badge:hover .credit-stack-img:nth-child(1) {
+  transform: translateX(-5px) scale(1.12);
+}
+.credit-badge:hover .credit-stack-img:nth-child(2) {
+  transform: translateX(-2px) scale(1.12);
+}
+.credit-badge:hover .credit-stack-img:nth-child(3) {
+  transform: scale(1.12);
+}
+
+.credit-stack-more {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--mantine-color-primary-6);
+  color: #0d2804;
+  font-size: 0.68rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--mantine-color-primary-9);
+  margin-right: -2px;
+  letter-spacing: -0.02em;
+}
+
+.credit-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.credit-sparkle {
+  color: var(--mantine-color-primary-3);
+  font-size: 0.85rem;
+  animation: pulse-sparkle 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-sparkle {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.25) rotate(15deg); }
+}
+
+.credit-text strong {
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(135, 222, 87, 0.6);
+  text-underline-offset: 3px;
+}
+
+/* Safeguard & Fallback Rules (Prevent any unstyled avatar blowup) */
+.footer-credit-badge-wrap img,
+.credit-stack-img,
+.capsule-avatar-img {
+  width: 26px !important;
+  height: 26px !important;
+  max-width: 26px !important;
+  max-height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.memory-capsule-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0.95rem 0.4rem 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.82rem;
+}
+
+.capsule-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.capsule-avatar-more {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--mantine-color-primary-6);
+  color: #0d2804;
+  font-size: 0.68rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--mantine-color-primary-9);
+  margin-right: -2px;
+}
+

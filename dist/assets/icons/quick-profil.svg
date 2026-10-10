@@ -1,0 +1,123 @@
+<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Roof Gradient -->
+    <linearGradient id="prof88-roof" x1="44" y1="18" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="prof88-gold" x1="44" y1="8" x2="44" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <!-- Wall Gradient -->
+    <linearGradient id="prof88-wall" x1="44" y1="40" x2="44" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Column Gradient -->
+    <linearGradient id="prof88-col" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F1F5F9"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+
+    <!-- Glass Entrance Door -->
+    <linearGradient id="prof88-glass" x1="44" y1="50" x2="44" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="60%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+
+    <!-- Red Flag -->
+    <linearGradient id="prof88-flag" x1="44" y1="4" x2="58" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+
+    <!-- Shrub Gradient -->
+    <linearGradient id="prof88-leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#15803D"/>
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="prof88-shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#064E3B" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Disc -->
+  <circle cx="44" cy="44" r="41" fill="#ECFDF5"/>
+  <circle cx="44" cy="44" r="34" fill="#D1FAE5" opacity="0.6"/>
+
+  <g filter="url(#prof88-shadow)">
+    <!-- Foundation Stone Stairs -->
+    <path d="M14 74H74V78H14V74Z" fill="#94A3B8"/>
+    <path d="M18 70H70V74H18V70Z" fill="#CBD5E1"/>
+    <path d="M22 66H66V70H22V66Z" fill="#E2E8F0"/>
+
+    <!-- Building Façade Body -->
+    <rect x="24" y="40" width="40" height="26" rx="2" fill="url(#prof88-wall)"/>
+
+    <!-- Classical Architectural Columns (4 Pillars) -->
+    <rect x="27" y="42" width="4.5" height="24" rx="2" fill="url(#prof88-col)"/>
+    <rect x="36" y="42" width="4.5" height="24" rx="2" fill="url(#prof88-col)"/>
+    <rect x="47.5" y="42" width="4.5" height="24" rx="2" fill="url(#prof88-col)"/>
+    <rect x="56.5" y="42" width="4.5" height="24" rx="2" fill="url(#prof88-col)"/>
+
+    <!-- Side Office Windows -->
+    <rect x="28" y="48" width="2.5" height="11" rx="1.2" fill="#38BDF8"/>
+    <rect x="57.5" y="48" width="2.5" height="11" rx="1.2" fill="#38BDF8"/>
+
+    <!-- Grand Center Double Entrance Doors -->
+    <rect x="41" y="50" width="6" height="16" rx="3" fill="url(#prof88-glass)"/>
+    <!-- Glass Reflection Sheen -->
+    <path d="M42 52L46 62V66L42 56V52Z" fill="#FFFFFF" fill-opacity="0.6"/>
+
+    <!-- Golden Entablature / Molding Beam -->
+    <rect x="22" y="37" width="44" height="4.5" rx="2" fill="url(#prof88-gold)"/>
+
+    <!-- Gable Roof (Emerald Green Minahasa Silhouette) -->
+    <path d="M19 37L44 21L69 37H19Z" fill="url(#prof88-roof)"/>
+    <!-- Roof Rim Highlight -->
+    <path d="M19 37L44 21L69 37" stroke="#FEF08A" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- Golden Official Kelurahan Crest -->
+    <circle cx="44" cy="30" r="4" fill="url(#prof88-gold)"/>
+    <circle cx="44" cy="30" r="2.3" fill="#FFFBEB"/>
+
+    <!-- Rooftop Tower Cupola -->
+    <rect x="41" y="14" width="6" height="8" rx="1" fill="#FFFFFF"/>
+    <path d="M40 14L44 8L48 14H40Z" fill="url(#prof88-gold)"/>
+
+    <!-- Indonesian Flagpole & Fluttering Merah Putih -->
+    <rect x="43.5" y="2" width="1.5" height="9" fill="#94A3B8"/>
+    <circle cx="44.25" cy="2" r="1.5" fill="#F59E0B"/>
+    <!-- Flag Ripples -->
+    <path d="M45 2.5C49 1.5 53 3.8 58 2.5V8.5C53 9.8 49 7.5 45 8.5V2.5Z" fill="url(#prof88-flag)"/>
+    <path d="M45 8.5C49 7.5 53 9.8 58 8.5V13C53 14.3 49 12 45 13V8.5Z" fill="#FFFFFF"/>
+    <path d="M45 2.5V13" stroke="#CBD5E1" stroke-width="0.5"/>
+
+    <!-- Beautiful Landscaping: Palm & Shrubbery -->
+    <!-- Left Palm Tree -->
+    <path d="M14 68Q16 52 12 42" stroke="#78350F" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M12 42Q7 37 4 39Q9 44 12 42Z" fill="#22C55E"/>
+    <path d="M12 42Q14 34 19 35Q15 40 12 42Z" fill="#16A34A"/>
+    <path d="M12 42Q8 48 6 52Q11 48 12 42Z" fill="#15803D"/>
+
+    <!-- Bushes at Base -->
+    <circle cx="18" cy="69" r="5" fill="url(#prof88-leaf)"/>
+    <circle cx="23" cy="70" r="4" fill="#22C55E"/>
+    <circle cx="70" cy="69" r="5" fill="url(#prof88-leaf)"/>
+    <circle cx="65" cy="70" r="4" fill="#22C55E"/>
+
+    <!-- Little Golden Star Sparkles -->
+    <polygon points="73,26 74,28 76,29 74,30 73,32 72,30 70,29 72,28" fill="#FBBF24"/>
+  </g>
+</svg>

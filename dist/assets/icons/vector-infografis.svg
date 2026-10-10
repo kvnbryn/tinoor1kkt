@@ -1,0 +1,18 @@
+<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base Horizontal Axis -->
+  <rect x="8" y="56" width="52" height="3" rx="1.5" fill="#64748B"/>
+  <!-- Vertical Bar 1 (Violet) -->
+  <rect x="12" y="40" width="8" height="16" rx="2" fill="#8B5CF6"/>
+  <!-- Vertical Bar 2 (Blue) -->
+  <rect x="23" y="30" width="8" height="26" rx="2" fill="#2563EB"/>
+  <!-- Vertical Bar 3 (Emerald) -->
+  <rect x="34" y="20" width="8" height="36" rx="2" fill="#10B981"/>
+  <!-- Vertical Bar 4 (Cyan) -->
+  <rect x="45" y="12" width="8" height="44" rx="2" fill="#06B6D4"/>
+  <!-- Ascending Trend Line & Arrow -->
+  <path d="M14 38 L25 28 L36 18 L48 9" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="53,6 43,8 48,15" fill="#F59E0B"/>
+  <circle cx="14" cy="38" r="2.5" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.5"/>
+  <circle cx="25" cy="28" r="2.5" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.5"/>
+  <circle cx="36" cy="18" r="2.5" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.5"/>
+</svg>
