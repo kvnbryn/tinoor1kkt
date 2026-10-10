@@ -13,8 +13,53 @@
 
 @media (max-width: 640px) {
   .floating-visitor-widget {
-    bottom: 1rem;
-    left: 1rem;
+    bottom: 0.85rem;
+    left: 0.85rem;
+  }
+
+  .visitor-pill-button {
+    padding: 0.35rem 0.55rem 0.35rem 0.45rem;
+    gap: 0.35rem;
+    border-radius: var(--radius-full);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .visitor-icon-box {
+    width: 22px;
+    height: 22px;
+  }
+
+  .visitor-icon-box svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .visitor-text-box {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .visitor-label {
+    display: none; /* Hide redundant "Kunjungan" text so button stays slim */
+  }
+
+  .visitor-count {
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #0f3004;
+  }
+
+  .visitor-chevron {
+    width: 12px;
+    height: 12px;
+  }
+
+  .visitor-popup-card {
+    width: 220px;
+    padding: 0.75rem;
+    bottom: calc(100% + 0.5rem);
+    left: 0;
   }
 }
 
@@ -149,9 +194,40 @@
 
 @media (max-width: 640px) {
   .floating-actions-container {
-    bottom: 1rem;
-    right: 1rem;
-    gap: 0.5rem;
+    bottom: 0.85rem;
+    right: 0.85rem;
+    gap: 0.45rem;
+  }
+
+  .btn-accessibility-floating {
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 2px 10px rgba(26, 86, 219, 0.3);
+  }
+
+  .btn-accessibility-floating svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn-pengaduan-floating {
+    height: 36px;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.78rem;
+    gap: 0.35rem;
+    box-shadow: 0 2px 10px rgba(223, 126, 114, 0.35);
+  }
+
+  .btn-pengaduan-floating svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .btn-pengaduan-floating {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.72rem;
   }
 }
 
@@ -196,11 +272,4 @@
   background: #cc6c60;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(223, 126, 114, 0.5);
-}
-
-@media (max-width: 480px) {
-  .btn-pengaduan-floating {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.85rem;
-  }
 }
